@@ -1,438 +1,362 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<title>Resume: Jeryn Mathew</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	</head>
+  <head>
+    <title>Resume: Jeryn Mathew</title>
+    <meta charset="UTF-8" />
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 lg:py-10">
+    <div
+      id="container"
+      class="bg-white lg:max-w-3xl mx-auto p-8 md:h-screen lg:h-auto lg:shadow-lg"
+    >
+      <div id="header" class="text-right mb-8">
+        <h1 class="text-4xl font-bold mb-2">Jeryn Mathew</h1>
+        <div class="flex flex-col items-end space-y-1 text-gray-600">
+          <div class="flex items-center">
+            <!-- Phone Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-5 mr-2"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                clip-rule="evenodd"
+              />
+            </svg>
 
-	<!--
-		Message to the curious ones:
-		I see you have decided to take a look at the HTML code. Very nice.
-		If you like the idea, get back to me regarding this on my email!
-		Have fun!!!
-	-->
-	<body class="textured">
-		<div id="container">
-			<div id="header">
-				<h1>Jeryn Mathew</h1>
-				<p class="contact phone"><a href="tel:+91 99166 75295">+91 99166 75295</a></p>
-				<p class="contact email"><a href="mailto:jerynmathew@gmail.com?subject=Your%20Resume">jerynmathew@gmail.com</a></p>
-				<p class="contact linkedin"><a href="https://in.linkedin.com/in/jeryn-mathew">LinkedIn</a></p>
-			</div>
-			<hr>
-			<div id="resume">
-				<h2>Overview</h2>
-				<p>I am a seasoned technology leader with over 17 years of experience in software development, architecture, and engineering management. I have a strong track record in leading cross-functional teams, scaling cloud platforms, and driving innovative solutions for complex technical challenges. I am passionate about mentoring teams, strategic planning, and delivering high-impact results.</p>
-				<br>
-				<h2>Experience</h2>
-				<p>
-					<b>Company:</b> <a href="https://esper.io/" target="_blank">Esper.io Inc</a><br/>
-					<b>Designation:</b> Principal Software Engineer (Cloud) <br/>
-					<b>Period:</b> June 2018 - Present
-				</p>
-				<div class="experience-entry">
-					<div class="timeline">
-						<p><span class="role">Principal Software Engineer & Cloud Team Lead</span></p>
-					</div>
-					<div class="experience">
-						<ol>
-							<li>Led the design and development of core cloud services and infrastructure, contributing to the company's rapid growth and technological advancement.</li>
-							<li>Managed and scaled the cloud team from 5 to 80+ members, overseeing hiring, mentoring, and career development.</li>
-							<li>Architected scalable solutions to support upto a million devices, ensuring high availability, performance, and security.</li>
-							<li>Collaborated with cross-functional teams including product, sales, and customer success to align technical strategies with business goals.</li>
-							<li>Presented technical and strategic updates to the executive leadership, driving key decisions and initiatives.</li>
-							<li>Instrumental in setting up best practices in DevOps, CI/CD, and cloud-native architectures.</li>
-						</ol>
-					</div>
-				</div>
-				
-				<p>
-					<b>Company:</b> <a href="https://retailio.in/" target="_blank">Retailio</a><br/>
-					<b>Designation:</b> Software Architect <br/>
-					<b>Period:</b> Nov 2016 - July 2017
-				</p>
-				<div class="experience-entry">
-					<div class="timeline">
-						<p><span class="role">Software Architect</span></p>
-					</div>
-					<div class="experience">
-						<ol>
-							<li>Designed and implemented a Master Data Management (MDM) system, significantly improving data accuracy and accessibility across the platform.</li>
-							<li>Architected scalable reporting and analytics solutions, providing insights for business growth and operational efficiency.</li>
-							<li>Led a team of engineers, ensuring high-quality deliverables through code reviews, mentoring, and technical guidance.</li>
-							<li>Enhanced system reliability and performance, supporting a user base of over 1 million across India.</li>
-						</ol>
-					</div>
-				</div>
-				
-				<p>
-					<b>Company:</b> <a href="http://www.amazon.com/" target="_blank">Amazon Development Center India</a><br/>
-					<b>Designation:</b> Software Development Engineer - 2<br/>
-					<b>Period:</b> July 2015 - Nov 2016
-				</p>
-				<div class="experience-entry">
-					<div class="timeline">
-						<p><span class="role">Senior Developer / Team Lead</span></p>
-					</div>
-					<div class="experience">
-						<ol>
-							<li>Led the development of a high-performance, scalable seller screening platform, supporting a 36x increase in users from 11M to 400M.</li>
-							<li>Designed a self-service onboarding system for Amazon’s screening platform, reducing onboarding time by 50%.</li>
-							<li>Developed an AWS-based auditing platform for compliance and security monitoring, improving regulatory adherence.</li>
-							<li>Reduced on-call burden through automation and optimization of team processes, improving overall team efficiency.</li>
-							<li>Contributed to team growth through technical leadership, mentoring, and active participation in recruitment.</li>
-						</ol>
-					</div>
-				</div>
-				
-				<p>
-					<b>Company:</b> <a href="http://www.taxiforsure.com/" target="_blank">Serendipity Infolabs Pvt Ltd (TaxiforSure)</a><br/>
-					<b>Designation:</b> Senior Software Developer<br/>
-					<b>Period:</b> June 2014 - June 2015
-				</p>
-				<div class="experience-entry">
-					<div class="timeline">
-						<p><span class="role">Senior Developer / DevOps & Tech R&D Lead</span></p>
-					</div>
-					<div class="experience">
-						<ol>
-							<li>Enhanced the performance and scalability of the core booking and dispatch platform, supporting rapid business growth.</li>
-							<li>Designed and implemented a fraud detection system, reducing fraud incidents by 40%.</li>
-							<li>Led DevOps and R&D initiatives, introducing Docker for streamlined development, testing, and deployment workflows.</li>
-							<li>Coordinated with cross-functional teams to manage deployments and infrastructure improvements, ensuring system stability and uptime.</li>
-							<li>Mentored junior developers and contributed to recruitment efforts, strengthening the technical expertise of the team.</li>
-						</ol>
-					</div>
-				</div>
-				
-				<p>
-					<b>Company:</b> <a href="https://www.nutanix.com/" target="_blank">Ideadevice Technologies Ltd</a><br/>
-					<b>Designation:</b> Senior Member of Technical Staff<br/>
-					<b>Period:</b> Sept 2013 - May 2014
-				</p>
-				<div class="experience-entry">
-					<div class="timeline">
-						<p><span class="role">Senior Technical Staff</span></p>
-					</div>
-					<div class="experience">
-						<ol>
-							<li>Developed core components for Epsilon (core product offering), including a high-performance VPN tunnel with REST interfaces.</li>
-							<li>Optimized and scaled existing product solutions, enhancing performance for key clients.</li>
-							<li>Led release management efforts, ensuring smooth and timely delivery of product updates.</li>
-							<li>Contributed to open-source projects, including gunicorn and gevent, advancing community-based development.</li>
-						</ol>
-					</div>
-				</div>
-				
-				<p>
-					<b>Company:</b> <a href="http://www.langoor.com.au/" target="_blank">Langoor Digital Pvt Ltd</a><br/>
-					<b>Designation:</b> Senior Development Guru<br/>
-					<b>Period:</b> Sept 2012 - Sept 2013
-				</p>
-				<div class="experience-entry">
-					<div class="timeline">
-						<p><span class="role">Senior Developer / Process Research Lead</span></p>
-					</div>
-					<div class="experience">
-						<ol>
-							<li>Developed backend solutions for Langoor.mobi, optimizing site performance and conversion rates.</li>
-							<li>Established new development processes and best practices, improving code quality and team productivity.</li>
-							<li>Conducted technical workshops and mentoring sessions, fostering a culture of continuous learning and development.</li>
-						</ol>
-					</div>
-				</div>
-				
-				<p>
-					<b>Company:</b> <a href="http://www.boschindia.com/" target="_blank">Robert Bosch Engineering and Business Solutions Ltd</a><br/>
-					<b>Designation:</b> Senior Software Engineer<br/>
-					<b>Period:</b> Aug 2007 - Feb 2011
-				</p>
-				<div class="experience-entry">
-					<div class="timeline">
-						<p><span class="role">Senior Software Engineer (Embedded Systems) / Tools & Driver Developer</span></p>
-					</div>
-					<div class="experience">
-						<ol>
-							<li>Developed automation tools and performance profiling systems, improving development efficiency by 30%.</li>
-							<li>Led the development of CAN protocol stack enhancements, enabling seamless integration with various automotive systems.</li>
-							<li>Mentored junior engineers, contributing to a high-performance development team and fostering a collaborative environment.</li>
-						</ol>
-					</div>
-				</div>
-				
-				<h2>Education</h2>
-				<p><b>Bachelor of Engineering (Electronics and Communcation)</b>, Rajagiri School of Engineering and Technology, Kakkanad, Kerala, 2003 - 2007</p>
-				
-				<h2>Skills</h2>
-				<ul>
-					<li><b>Languages & Frameworks:</b> Python, Golang, JavaScript, Django, Flask, Fastapi</li>
-					<li><b>Cloud & DevOps:</b> AWS, Docker, Kubernetes, Terraform, Jenkins</li>
-					<li><b>Databases:</b> PostgreSQL, Redis, Elasticsearch, Kafka</li>
-					<li><b>Tools & Platforms:</b> Git, GitLab, Jenkins, Prometheus, Grafana, Logstash, Kibana</li>
-					<li><b>Methodologies:</b> Agile, Scrum, Lean, Test-Driven Development (TDD)</li>
-					<li><b>Leadership & Management:</b> Team Building, Mentoring, Strategic Planning, Stakeholder Communication</li>
-				</ul>
-			</div>
-				<!--
-				To the curious among you:
-				This gap in my resume is the timeframe I was in the hospital, ungergoing Bariatric surgery.
-				I had 6 months to recoup (after the surgery in Aug '11); and I was going crazy, cooped up at home. So I decided go do some freelance work online.
-				<p>
-					<b>Company:</b> <a href="http://www.odesk.com/" target="_blank">oDesk.com</a> and <a href="http://www.elance.com/" target="_blank">Elance.com</a><br/>
-					<b>Designation:</b> Freelance Software Contractor<br/>
-					<b>Period:</b> Feb 2011 - Sept 2012.
-				</p>
-				<div class="experience-entry">
-					<div class="timeline">
-						<p><span class="role">Freelance Contractor</span>Feb 2011 - To Date</p>
-					</div>
-					<div class="experience">
-						<h3>Web Programming/Development</h3>
-						<p>System was built on Mediacore, a Python-based server framework for delivering large media content, similar to Youtube.
-						   Web templates had to be modified to requirements; CSS and jQuery for theming the website. All work was conducted remotely.</p>
-						<h3>Desktop Applications</h3>
-						<p>Designed a Records Management for Fatima Matha Church, S. Kalamassery. Software was designed as a web-app using Flask, Jinja2 and Python.</p>
-						<p>Designed a Records Management software for Sunny Dental Clinic, Pala. Software was designed in C# and used SQLite for DB management, with automatic backups to Dropbox.</p>
-						<h3>Minor Works</h3>
-						<p>Many clients required several scripts and tools for automation and optimization of tasks. These too were mostly done in Python or C#.</p>
-					</div>
-				</div>
-				<br/>
-				-->
-			</div>
-			<br>
-			<hr>
-			<div id="footer">
-			</div>
-		</div>
-		<style>
-			/* http://meyerweb.com/eric/tools/css/reset/
-			   v2.0 | 20110126
-			   License: none (public domain)
-			*/
-
-			/* Reset styles */
-			html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, em, img,
-			small, strike, strong, b, u, i, center,
-			dl, dt, dd, ol, ul, li,
-			table, caption, tbody, tfoot, thead, tr, th, td {
-				margin: 0;
-				padding: 0;
-				border: 0;
-				font-size: 100%;
-				font: inherit;
-				vertical-align: baseline;
-			}
-			ol, ul {
-				list-style: none;
-			}
-			table {
-				border-collapse: collapse;
-				border-spacing: 0;
-			}
-			b {
-				font-weight: bold;
-			}
-
-			/* Resume Styling */
-			html {
-				height: 100%;
-			}
-
-			body {
-				font-family: Verdana, sans-serif;
-				line-height: 1.5em;
-				min-height: 100%;
-				padding-top: 20px;
-				padding-bottom: 20px;
-
-
-				/*background: #eeeef1;*/
-                /* Background Image for Resume */
-                background-image: url("data:image/jpg;base64,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");
-                /* background-size: cover; Ensure the image covers the whole page */
-                background-attachment: fixed; /*Make the image stay in place while scrolling*/
-                /* background-position: center center; Center the image */
-                /*background-repeat: no-repeat;*/
-			}
-
-			h1, h2, h3, h4, th {
-				font-weight: normal;
-			}
-
-			a {
-				text-decoration: none;
-				color: #04f;
-			}
-			a:hover {
-				color: #f40;
-			}
-			a:visited {
-				color: #267;
-			}
-
-			p {
-				margin: 1em 0;
-			}
-
-			#container {
-				background: white;
-				margin: 0 auto;
-				padding: 25px;
-				max-width: 950px; /* Change to max-width for responsiveness */
-				box-sizing: border-box; /* Ensure padding does not affect width */
-			}
-			@media screen {
-				#container {
-					border: 1px solid #5f5f5f;
-					box-shadow: 3px 3px 10px rgba(0,0,0,0.7);
-				}
-			}
-
-			#header {
-				padding: 75px 0 10px;
-				display: block;
-				text-align: right;
-			}
-
-			#header h1 {
-				font-size: 250%;
-				margin: 15px 0;
-			}
-
-			#header .contact {
-				min-height: 19px;
-				margin: 2px 0;
-				background-repeat: no-repeat;
-				background-position: center right;
-				padding-right: 25px;
-			}
-
-			#header .email {
-				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAYAAAAGRPQsAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sGAgUhGuZSVRUAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAHJJREFUOMtjYBisgJGBgYHhjYHBf0oNErlwgZEFmyCxBqA7ggndEGJdCVOHbDkTNlcRMhCbQRiGEWMgLoOwGobPQHwG4TQMm4GEDMJrGDYDCcU0EzHph9gkw0RsgiRGHRNS4LLiiD0uPEmEi2bZiaoZHQAlf0LqvWD3ZwAAAABJRU5ErkJggg%3D%3D);
-			}
-
-			#header .phone {
-				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAATCAYAAABLN4eXAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sGAgUaA76LEu0AAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAHhJREFUKM+tkt0NwCAIhBFp0xXconMxECs6RE3sE4kxYir2nvCH8N0pgENBC+ZctRZJYdaEnkn4G54lxabRZi/mHAGg6JoGF0YTj2VPIqlsB0GW2Q4Zp03qSSSFxl/04F1gxDp9p/b8K97pifxZxmPO6MG7tz+sSy+SbDt/cX8PcQAAAABJRU5ErkJggg%3D%3D);
-			}
-
-            #header .linkedin {
-                background-image: url(data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABELAAARCwAAAAAAAAAAAACzdwBltXcA8bV3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3APGzdwBltXcA8bV3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA8bV3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP///////////7V3AP///////////7V3AP+1dwD/tXcA////////////tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD///////////+1dwD///////////+1dwD/tXcA/7V3AP///////////7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA////////////tXcA////////////tXcA/7V3AP+1dwD///////////+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP///////////7V3AP///////////7V3AP+1dwD/tXcA////////////tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD///////////+1dwD////////////UsHD/xZZA/9SwcP///////////7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA////////////tXcA////////////+vfw//////////////////bu4P+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP///////////7V3AP///////////8CNMP/69/D///////r38P/FlkD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/wI0w/8CNMP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/wI0w//r38P/69/D/wI0w/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/8CNMP/69/D/+vfw/8CNMP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/wI0w/8CNMP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3APG1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3APGzdwBltXcA8bV3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3AP+1dwD/tXcA/7V3APGzdwBlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==);
-            }
-
-			/* List Styles */
-			ol {
-				list-style: square;
-				padding: 1em;
-			}
-
-			li {
-				line-height: 1.75em;
-			}
-
-			hr {
-				border: 0px;
-				background-color: #ccc;
-				height: 1px;
-			}
-
-			h2 {
-				font-size: 150%;
-				margin: 25px 0 15px;
-			}
-			h3 {
-				font-size: 110%;
-			}
-
-			/* Table Styling */
-			#resume #table-striped {
-				margin: 10px auto;
-				border-top: 1px solid #ccf;
-				border-bottom: 1px solid #ccf;
-				min-width: 50%;
-			}
-			#resume #table-striped caption {
-				color: #99f;
-				font-size: 80%;
-				padding: 5px 0;
-			}
-			#resume #table-striped th, #resume #table-striped td {
-				text-align: center;
-				padding: 2px 1em;
-			}
-			#resume #table-striped th {
-				border-bottom: 1px solid #aaf;
-				font-size: 110%;
-			}
-			#resume #table-striped tbody tr:nth-child(odd) {
-				background: #eef;
-			}
-
-			/* Experience Section */
-			div.experience-entry {
-				margin: 1em 0;
-				display: table;
-				width: 100%;
-				page-break-inside: avoid;
-			}
-
-			div.experience-entry .timeline {
-				padding: 0 1em;
-				width: 25%;
-				display: table-cell;
-				text-align: right;
-			}
-
-			div.experience-entry .experience {
-				padding: 0.5em 1em;
-				display: table-cell;
-			}
-
-			div.experience-entry .role {
-				padding: 2px 0;
-				font-weight: bold;
-			}
-
-			div.experience-entry h3.achievements {
-				text-align: center;
-				padding: 10px 5px;
-				border-top: 1px solid #ddd;
-			}
-
-			div.experience-entry ul.achievements {
-				list-style-type: square;
-				padding-left: 20px;
-			}
-
-			#footer {
-				height: 5em;
-			}
-
-		</style>
-		<!-- Couple of changes to make it work on < IE8 where table-cell is not recognized.
-			 uses floats to get the table like layout. And yes, uses a clear directive
-			 to ensure that the content lines up as expected. -->
-		<!--[if lt IE 8]>
-		<style>
-			div.experience-entry, h2 {
-				clear: both;
-			}
-			div.experience-entry > div.timeline {
-				border: 0;
-				width: 20%;
-				height: 100%;
-				float: left;
-				display: block;
-			}
-
-			div.experience-entry > div.experience {
-				width: 75%;
-				height: 100%;
-				float: right;
-				display: block;
-			}
-		</style>
-		<![endif]-->
-
-	</body>
+            <a href="tel:+91 99166 75295" class="hover:text-blue-500"
+              >+91 99166 75295</a
+            >
+          </div>
+          <div class="flex items-center">
+            <!-- Email Icon -->
+            <svg
+              class="h-5 w-5 mr-2 text-gray-600"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M1.5 6.75l10.5 6 10.5-6v10.5h-21v-10.5zm0-1.5h21l-10.5 6-10.5-6z"
+              />
+            </svg>
+            <a
+              href="mailto:jerynmathew@gmail.com?subject=Your%20Resume"
+              class="hover:text-blue-500"
+              >jerynmathew@gmail.com</a
+            >
+          </div>
+          <div class="flex items-center">
+            <!-- LinkedIn Icon -->
+            <svg
+              class="h-5 w-5 mr-2 text-gray-600"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.761 2.24 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.76-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.293c-.966 0-1.75-.79-1.75-1.707s.784-1.707 1.75-1.707 1.75.79 1.75 1.707-.784 1.707-1.75 1.707zm13.5 11.293h-3v-5.5c0-3.078-3-2.829-3 0v5.5h-3v-10h3v1.354c1.396-2.586 7-2.777 7 2.476v6.17z"
+              />
+            </svg>
+            <a
+              href="https://in.linkedin.com/in/jeryn-mathew"
+              class="hover:text-blue-500"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-gray-300" />
+      <div id="resume" class="text-left">
+        <h2 class="text-2xl font-semibold mt-8 mb-4">Overview</h2>
+        <p class="text-gray-800">
+          I am a seasoned technology leader with over 17 years of experience in
+          software development, architecture, and engineering management. I have
+          a strong track record in leading cross-functional teams, scaling cloud
+          platforms, and driving innovative solutions for complex technical
+          challenges. I am passionate about mentoring teams, strategic planning,
+          and delivering high-impact results.
+        </p>
+        <h2 class="text-2xl font-semibold mt-8 mb-4">Experience</h2>
+        <!-- Experience Entry -->
+        <div class="mb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-xl font-semibold">
+              <a
+                href="https://esper.io/"
+                target="_blank"
+                class="hover:text-blue-500"
+                >Esper.io Inc</a
+              >
+            </h3>
+            <span class="text-gray-600">June 2018 - Present</span>
+          </div>
+          <p class="italic text-gray-700">
+            Principal Software Engineer (Cloud)
+          </p>
+          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
+            <li>
+              Led the design and development of core cloud services and
+              infrastructure, contributing to the company's rapid growth and
+              technological advancement.
+            </li>
+            <li>
+              Managed and scaled the cloud team from 5 to 80+ members,
+              overseeing hiring, mentoring, and career development.
+            </li>
+            <li>
+              Architected scalable solutions to support up to a million devices,
+              ensuring high availability, performance, and security.
+            </li>
+            <li>
+              Collaborated with cross-functional teams including product, sales,
+              and customer success to align technical strategies with business
+              goals.
+            </li>
+            <li>
+              Presented technical and strategic updates to the executive
+              leadership, driving key decisions and initiatives.
+            </li>
+            <li>
+              Instrumental in setting up best practices in DevOps, CI/CD, and
+              cloud-native architectures.
+            </li>
+          </ul>
+        </div>
+        <!-- Next Experience Entry -->
+        <div class="mb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-xl font-semibold">
+              <a
+                href="https://retailio.in/"
+                target="_blank"
+                class="hover:text-blue-500"
+                >Retailio</a
+              >
+            </h3>
+            <span class="text-gray-600">Nov 2016 - July 2017</span>
+          </div>
+          <p class="italic text-gray-700">Software Architect</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
+            <li>
+              Designed and implemented a Master Data Management (MDM) system,
+              significantly improving data accuracy and accessibility across the
+              platform.
+            </li>
+            <li>
+              Architected scalable reporting and analytics solutions, providing
+              insights for business growth and operational efficiency.
+            </li>
+            <li>
+              Led a team of engineers, ensuring high-quality deliverables
+              through code reviews, mentoring, and technical guidance.
+            </li>
+            <li>
+              Enhanced system reliability and performance, supporting a user
+              base of over 1 million across India.
+            </li>
+          </ul>
+        </div>
+        <!-- Continue with other experiences similarly -->
+        <div class="mb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-xl font-semibold">
+              <a
+                href="http://www.amazon.com/"
+                target="_blank"
+                class="hover:text-blue-500"
+                >Amazon Development Center India</a
+              >
+            </h3>
+            <span class="text-gray-600">July 2015 - Nov 2016</span>
+          </div>
+          <p class="italic text-gray-700">Software Development Engineer - 2</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
+            <li>
+              Led the development of a high-performance, scalable seller
+              screening platform, supporting a 36x increase in users from 11M to
+              400M.
+            </li>
+            <li>
+              Designed a self-service onboarding system for Amazon’s screening
+              platform, reducing onboarding time by 50%.
+            </li>
+            <li>
+              Developed an AWS-based auditing platform for compliance and
+              security monitoring, improving regulatory adherence.
+            </li>
+            <li>
+              Reduced on-call burden through automation and optimization of team
+              processes, improving overall team efficiency.
+            </li>
+            <li>
+              Contributed to team growth through technical leadership,
+              mentoring, and active participation in recruitment.
+            </li>
+          </ul>
+        </div>
+        <!-- Continue with other experiences similarly -->
+        <div class="mb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-xl font-semibold">
+              <a
+                href="http://www.olacabs.com/"
+                target="_blank"
+                class="hover:text-blue-500"
+                >TaxiforSure (Serendipity Infolabs Pvt Ltd)</a
+              >
+            </h3>
+            <span class="text-gray-600">June 2014 - June 2015</span>
+          </div>
+          <p class="italic text-gray-700">Senior Developer / DevOps & Tech R&D Lead</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
+            <li>
+              Enhanced the performance and scalability of the core booking and 
+              dispatch platform, supporting rapid business growth
+            </li>
+            <li>
+              Designed and implemented a fraud detection system, 
+              reducing fraud incidents by 40%
+            </li>
+            <li>
+              Led DevOps and R&D initiatives, introducing Docker 
+              for streamlined development, testing, and deployment workflows
+            </li>
+            <li>
+              Coordinated with cross-functional teams to manage deployments 
+              and infrastructure improvements, ensuring system stability and uptime
+            </li>
+            <li>
+              Mentored junior developers and contributed to recruitment efforts, 
+              strengthening the technical expertise of the team
+            </li>
+          </ul>
+        </div>
+        <!-- Continue with other experiences similarly -->
+        <div class="mb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-xl font-semibold">
+              <a
+                href="https://www.nutanix.com"
+                target="_blank"
+                class="hover:text-blue-500"
+                >Ideadevice Technologies Ltd</a
+              >
+            </h3>
+            <span class="text-gray-600">Sept 2013 - May 2014</span>
+          </div>
+          <p class="italic text-gray-700">Senior Member of Technical Staff</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
+            <li>
+              Developed core components for Epsilon (core product offering), 
+              including a high-performance VPN tunnel with REST interfaces
+            </li>
+            <li>
+              Optimized and scaled existing product solutions, 
+              enhancing performance for key clients.
+            </li>
+            <li>
+              Led release management efforts, ensuring smooth and 
+              timely delivery of product updates
+            </li>
+            <li>
+              Contributed to open-source projects, including gunicorn and gevent, 
+              advancing community-based development
+            </li>
+          </ul>
+        </div>
+        <!-- Continue with other experiences similarly -->
+        <div class="mb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-xl font-semibold">
+              <a
+                href="http://www.langoor.com.au/"
+                target="_blank"
+                class="hover:text-blue-500"
+                >Langoor Digital Pvt Ltd</a
+              >
+            </h3>
+            <span class="text-gray-600">Sept 2012 - Sept 2013</span>
+          </div>
+          <p class="italic text-gray-700">Senior Development Guru</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
+            <li>
+              Developed backend solutions for Langoor.mobi, 
+              optimizing site performance and conversion rates
+            </li>
+            <li>
+              Established new development processes and best practices, 
+              improving code quality and team productivity
+            </li>
+            <li>
+              Conducted technical workshops and mentoring sessions, 
+              fostering a culture of continuous learning and development
+            </li>
+          </ul>
+        </div>
+        <!-- Continue with other experiences similarly -->
+        <div class="mb-6">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-xl font-semibold">
+              <a
+                href="http://www.boschindia.com/"
+                target="_blank"
+                class="hover:text-blue-500"
+                >Robert Bosch Engineering and Business Solutions Ltd</a
+              >
+            </h3>
+            <span class="text-gray-600">Aug 2007 - Feb 2011</span>
+          </div>
+          <p class="italic text-gray-700">Senior Software Engineer (Embedded Systems) / Tools & Driver Developer</p>
+          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
+            <li>
+              Developed automation tools and performance profiling systems, 
+              improving development efficiency by 30%
+            </li>
+            <li>
+              Led the development of CAN protocol stack enhancements, 
+              enabling seamless integration with various automotive systems
+            </li>
+            <li>
+              Mentored junior engineers, contributing to a high-performance 
+              development team and fostering a collaborative environment
+            </li>
+          </ul>
+        </div>
+        <!-- Add more experience entries here following the same structure -->
+        <h2 class="text-2xl font-semibold mt-8 mb-4">Education</h2>
+        <p class="text-gray-800">
+          <b>Bachelor of Engineering (Electronics and Communication)</b>,
+          Rajagiri School of Engineering and Technology, 2003
+          - 2007
+        </p>
+        <h2 class="text-2xl font-semibold mt-8 mb-4">Skills</h2>
+        <ul class="list-disc ml-6 mt-4 text-gray-800 space-y-2">
+          <li>
+            <b>Languages & Frameworks:</b> Python, Golang, JavaScript, Django,
+            Flask, FastAPI
+          </li>
+          <li>
+            <b>Cloud & DevOps:</b> AWS, Docker, Kubernetes, Terraform, Jenkins
+          </li>
+          <li><b>Databases:</b> PostgreSQL, Redis, Elasticsearch, Kafka</li>
+          <li>
+            <b>Tools & Platforms:</b> Git, GitLab, Jenkins, Prometheus, Grafana,
+            Logstash, Kibana
+          </li>
+          <li>
+            <b>Methodologies:</b> Agile, Scrum, Lean, Test-Driven Development
+            (TDD)
+          </li>
+          <li>
+            <b>Leadership & Management:</b> Team Building, Mentoring, Strategic
+            Planning, Stakeholder Communication
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
