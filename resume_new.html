@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeryn Mathew - Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px 40px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-content {
+            max-width: 70%;
+        }
+        .photo-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 12px;
+            text-align: center;
+        }
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+        .contact-info {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .contact-info a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .contact-item {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-icon {
+            width: 20px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .main-content {
+            padding: 30px 40px;
+            position: relative;
+        }
+        .section {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+            position: relative;
+        }
+        .achievements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .achievement-card {
+            flex: 1 1 calc(50% - 15px);
+            min-width: 200px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 12px 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .achievement-metric {
+            font-weight: 700;
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .achievement-description {
+            font-size: 14px;
+            color: #555;
+        }
+        .timeline {
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background-color: #e0e0e0;
+        }
+        .job {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 25px;
+        }
+        .job::before {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #3498db;
+            left: -6px;
+            top: 5px;
+            border: 2px solid white;
+            z-index: 1;
+        }
+        .job-header {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .job-title {
+            font-weight: 600;
+            font-size: 17px;
+            color: #2c3e50;
+        }
+        .company {
+            font-weight: 500;
+            color: #3498db;
+        }
+        .company-description {
+            font-style: italic;
+            font-size: 13px;
+            color: #777;
+            margin-top: 2px;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .responsibilities {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .responsibilities li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        .responsibilities li::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .skill-category {
+            flex: 1 1 45%;
+            min-width: 250px;
+        }
+        .skill-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .skill-icon {
+            margin-right: 8px;
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+            color: #3498db;
+        }
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-item {
+            position: relative;
+            background-color: #f0f7fc;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+            border: 1px solid #deecf5;
+        }
+        .skill-level {
+            display: inline-block;
+            margin-left: 5px;
+        }
+        .skill-dot {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #3498db;
+            margin: 0 1px;
+        }
+        .skill-dot.empty {
+            background-color: #e0e0e0;
+        }
+        .education {
+            margin-bottom: 15px;
+        }
+        .education-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .summary {
+            line-height: 1.7;
+            color: #555;
+        }
+        .testimonial {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 15px;
+            font-style: italic;
+            color: #555;
+            position: relative;
+        }
+        .testimonial::before, .testimonial::after {
+            content: '"';
+            font-size: 24px;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .testimonial-author {
+            font-style: normal;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-top: 10px;
+            text-align: right;
+            font-size: 14px;
+        }
+        .qr-code {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            width: 80px;
+            height: 80px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #777;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #f0f7fc;
+            color: #777;
+            font-size: 12px;
+            border-top: 1px solid #deecf5;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+            .header-content {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            .photo-container {
+                margin: 0 auto;
+            }
+            .achievement-card {
+                flex: 1 1 100%;
+            }
+            .skill-category {
+                flex: 1 1 100%;
+            }
+            .qr-code {
+                position: relative;
+                margin: 20px auto;
+                bottom: auto;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="name">JERYN MATHEW VARGHESE</div>
+                <div class="title">Principal Software Engineer & Cloud Architect</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>+91 99166 75295</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <a href="mailto:jerynmathew@gmail.com">jerynmathew@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🔗</span>
+                        <a href="https://www.linkedin.com/in/jerynmathew">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-container">
+                Add 1" x 1" professional photo here
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <div class="section-title">PROFESSIONAL SUMMARY</div>
+                <p class="summary">
+                    Seasoned technology leader with 17+ years of experience in software development, cloud architecture, and engineering management. Proven track record in leading cross-functional teams, scaling cloud platforms to support millions of devices, and driving innovative solutions for complex technical challenges. Expert in AWS cloud services, Python, Golang, and DevOps practices with a passion for mentoring teams and delivering high-impact results.
+                </p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">KEY ACHIEVEMENTS</div>
+                <div class="achievements">
+                    <div class="achievement-card">
+                        <div class="achievement-metric">1,000,000+</div>
+                        <div class="achievement-description">Devices supported by cloud architecture developed and scaled at Esper.io</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-metric">36x</div>
+                        <div class="achievement-description">Growth in users (11M to 400M) supported by seller screening platform at Amazon</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-metric">80+</div>
+                        <div class="achievement-description">Team members managed and mentored in cloud engineering</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-metric">40%</div>
+                        <div class="achievement-description">Reduction in fraud incidents through detection system designed at TaxiforSure</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+                <div class="timeline">
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Principal Software Engineer (Cloud)</div>
+                                <div class="company">Esper.io Inc</div>
+                                <div class="company-description">Enterprise Android DevOps platform enabling teams to manage device fleets</div>
+                            </div>
+                            <div class="date">09/2017 - 01/2025</div>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Architected scalable cloud infrastructure supporting up to 1M devices with high availability and security.</li>
+                            <li>Scaled cloud engineering team from 5 to 80+ members, implementing mentorship and career development programs.</li>
+                            <li>Established DevOps best practices and cloud-native architectures, optimizing deployment workflows.</li>
+                            <li>Aligned technical strategies with business goals through cross-functional collaboration with product, sales, and customer success teams.</li>
+                            <li>Presented strategic technical updates to executive leadership, influencing key organizational decisions.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Software Architect</div>
+                                <div class="company">Retailio</div>
+                                <div class="company-description">B2B pharmaceutical marketplace connecting retailers with distributors</div>
+                            </div>
+                            <div class="date">11/2016 - 07/2017</div>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Designed and implemented a Master Data Management (MDM) system, significantly improving data accuracy.</li>
+                            <li>Architected scalable reporting and analytics solutions providing key business growth insights.</li>
+                            <li>Led engineering team through code reviews, mentoring, and technical guidance.</li>
+                            <li>Enhanced system reliability supporting 1M+ users across India.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Software Development Engineer - 2</div>
+                                <div class="company">Amazon Development Center India</div>
+                                <div class="company-description">R&D center developing technologies for Amazon's global operations</div>
+                            </div>
+                            <div class="date">07/2015 - 11/2016</div>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Led development of seller screening platform that scaled from 11M to 400M users (36x growth).</li>
+                            <li>Designed self-service onboarding system reducing platform onboarding time by 50%.</li>
+                            <li>Developed AWS-based auditing platform for improved compliance and security monitoring.</li>
+                            <li>Reduced on-call burden through process automation and optimization.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Senior Developer / DevOps & Tech R&D Lead</div>
+                                <div class="company">TaxiforSure (Serendipity Infolabs Pvt Ltd)</div>
+                                <div class="company-description">Ride-sharing platform connecting passengers with taxi operators</div>
+                            </div>
+                            <div class="date">06/2014 - 06/2015</div>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Enhanced core booking platform performance supporting rapid business growth.</li>
+                            <li>Designed fraud detection system reducing incidents by 40%.</li>
+                            <li>Introduced Docker for streamlined development and deployment workflows.</li>
+                            <li>Ensured system stability through infrastructure improvements and cross-team coordination.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Senior Member of Technical Staff</div>
+                                <div class="company">Ideadevice Technologies Ltd</div>
+                            </div>
+                            <div class="date">09/2013 - 05/2014</div>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Developed high-performance VPN tunnel with REST interfaces for core product.</li>
+                            <li>Optimized product solutions enhancing performance for key clients.</li>
+                            <li>Led release management ensuring timely product updates.</li>
+                            <li>Contributed to open-source projects including gunicorn and gevent.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Senior Development Guru</div>
+                                <div class="company">Langoor Digital Pvt Ltd</div>
+                            </div>
+                            <div class="date">09/2012 - 09/2013</div>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Developed backend solutions optimizing site performance and conversion rates.</li>
+                            <li>Established development processes improving code quality and team productivity.</li>
+                            <li>Conducted technical workshops fostering continuous learning and development.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Career Break - Professional Development</div>
+                            </div>
+                            <div class="date">02/2011 - 09/2012</div>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Pursued advanced training in web technologies and cloud computing.</li>
+                            <li>Contributed to open-source projects to enhance skills in emerging technologies.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Senior Software Engineer (Embedded Systems)</div>
+                                <div class="company">Robert Bosch Engineering and Business Solutions Ltd</div>
+                            </div>
+                            <div class="date">08/2007 - 02/2011</div>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Developed automation tools improving development efficiency by 30%.</li>
+                            <li>Led CAN protocol stack enhancements enabling seamless automotive systems integration.</li>
+                            <li>Mentored junior engineers fostering a collaborative development environment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">TESTIMONIAL</div>
+                <div class="testimonial">
+                    Jeryn is an exceptional technical leader who consistently delivers innovative solutions while mentoring his team. His ability to architect scalable systems and translate complex technical concepts into business value is remarkable.
+                    <div class="testimonial-author">— Former Manager, Esper.io</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">TECHNICAL PROWESS</div>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <div class="skill-title">
+                            <span class="skill-icon">🧩</span>
+                            Languages & Frameworks
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">Python
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                </span>
+                            </span>
+                            <span class="skill-item">Golang
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </span>
+                            <span class="skill-item">JavaScript
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </span>
+                            <span class="skill-item">Django</span>
+                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">FastAPI</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">
+                            <span class="skill-icon">☁️</span>
+                            Cloud & DevOps
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">AWS
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                </span>
+                            </span>
+                            <span class="skill-item">Docker
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </span>
+                            <span class="skill-item">Kubernetes
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </span>
+                            <span class="skill-item">Terraform</span>
+                            <span class="skill-item">Jenkins</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">
+                            <span class="skill-icon">🗄️</span>
+                            Databases
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">PostgreSQL
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </span>
+                            <span class="skill-item">Redis</span>
+                            <span class="skill-item">Elasticsearch</span>
+                            <span class="skill-item">Kafka</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">
+                            <span class="skill-icon">🔧</span>
+                            Tools & Platforms
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">GitLab</span>
+                            <span class="skill-item">Jenkins</span>
+                            <span class="skill-item">Prometheus</span>
+                            <span class="skill-item">Grafana</span>
+                            <span class="skill-item">Logstash</span>
+                            <span class="skill-item">Kibana</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">
+                            <span class="skill-icon">📊</span>
+                            Methodologies
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">Agile</span>
+                            <span class="skill-item">Scrum</span>
+                            <span class="skill-item">Lean</span>
+                            <span class="skill-item">Test-Driven Development (TDD)</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">
+                            <span class="skill-icon">👥</span>
+                            Leadership & Management
+                        </div>
+                        <div class="skill-list">
+                            <span class="skill-item">Team Building</span>
+                            <span class="skill-item">Mentoring</span>
+                            <span class="skill-item">Strategic Planning</span>
+                            <span class="skill-item">Stakeholder Communication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">EDUCATION</div>
+                <div class="education">
+                    <div class="job-header">
+                        <div>
+                            <div class="education-title">Bachelor of Engineering (Electronics and Communication)</div>
+                            <div>Rajagiri School of Engineering and Technology</div>
+                        </div>
+                        <div class="date">2003 - 2007</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="qr-code">
+                QR Code to LinkedIn Profile
+            </div>
+        </div>
+
+        <div class="footer">
+            Resume Reference: JM-2025-03 | Last Updated: March 2025 | This document contains confidential information intended for recruitment purposes only.
+        </div>
+    </div>
+</body>
+</html>
