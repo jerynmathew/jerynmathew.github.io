@@ -1,362 +1,407 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Resume: Jeryn Mathew</title>
-    <meta charset="UTF-8" />
-    <!-- Include Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-100 lg:py-10">
-    <div
-      id="container"
-      class="bg-white lg:max-w-3xl mx-auto p-8 md:h-screen lg:h-auto lg:shadow-lg"
-    >
-      <div id="header" class="text-right mb-8">
-        <h1 class="text-4xl font-bold mb-2">Jeryn Mathew</h1>
-        <div class="flex flex-col items-end space-y-1 text-gray-600">
-          <div class="flex items-center">
-            <!-- Phone Icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="size-5 mr-2"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
-                clip-rule="evenodd"
-              />
-            </svg>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeryn Mathew - Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px 40px;
+            position: relative;
+        }
+        .header-content {
+            max-width: 70%;
+        }
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+        .contact-info {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .contact-info a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .contact-item {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-icon {
+            width: 20px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .main-content {
+            padding: 30px 40px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+            position: relative;
+        }
+        .job {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .job-header {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .job-title {
+            font-weight: 600;
+            font-size: 17px;
+            color: #2c3e50;
+        }
+        .company {
+            font-weight: 500;
+            color: #3498db;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .responsibilities {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .responsibilities li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        .responsibilities li::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .skill-category {
+            flex: 1 1 45%;
+            min-width: 250px;
+        }
+        .skill-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .skill-title::before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #3498db;
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-item {
+            background-color: #f0f7fc;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+            border: 1px solid #deecf5;
+        }
+        .education {
+            margin-bottom: 15px;
+        }
+        .education-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .summary {
+            line-height: 1.7;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                max-width: 100%;
+            }
+            .skill-category {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="name">JERYN MATHEW</div>
+                <div class="title">Principal Software Engineer & Cloud Architect</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>+91 99166 75295</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <a href="mailto:jerynmathew@gmail.com">jerynmathew@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🔗</span>
+                        <a href="https://www.linkedin.com/in/jerynmathew">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <a href="tel:+91 99166 75295" class="hover:text-blue-500"
-              >+91 99166 75295</a
-            >
-          </div>
-          <div class="flex items-center">
-            <!-- Email Icon -->
-            <svg
-              class="h-5 w-5 mr-2 text-gray-600"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M1.5 6.75l10.5 6 10.5-6v10.5h-21v-10.5zm0-1.5h21l-10.5 6-10.5-6z"
-              />
-            </svg>
-            <a
-              href="mailto:jerynmathew@gmail.com?subject=Your%20Resume"
-              class="hover:text-blue-500"
-              >jerynmathew@gmail.com</a
-            >
-          </div>
-          <div class="flex items-center">
-            <!-- LinkedIn Icon -->
-            <svg
-              class="h-5 w-5 mr-2 text-gray-600"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.761 2.24 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.76-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.293c-.966 0-1.75-.79-1.75-1.707s.784-1.707 1.75-1.707 1.75.79 1.75 1.707-.784 1.707-1.75 1.707zm13.5 11.293h-3v-5.5c0-3.078-3-2.829-3 0v5.5h-3v-10h3v1.354c1.396-2.586 7-2.777 7 2.476v6.17z"
-              />
-            </svg>
-            <a
-              href="https://in.linkedin.com/in/jeryn-mathew"
-              class="hover:text-blue-500"
-              >LinkedIn</a
-            >
-          </div>
+        <div class="main-content">
+            <div class="section">
+                <div class="section-title">PROFESSIONAL SUMMARY</div>
+                <p class="summary">
+                    Seasoned technology leader with 17+ years of experience in software development, cloud architecture, and engineering management. Proven track record in leading cross-functional teams, scaling cloud platforms to support millions of devices, and driving innovative solutions for complex technical challenges. Expert in AWS cloud services, Python, Golang, and DevOps practices with a passion for mentoring teams and delivering high-impact results.
+                </p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Principal Software Engineer (Cloud)</div>
+                            <div class="company">Esper.io Inc</div>
+                        </div>
+                        <div class="date">06/2018 - Present</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Led the design and development of core cloud services and infrastructure, contributing to the company's rapid growth and technological advancement.</li>
+                        <li>Managed and scaled the cloud team from 5 to 80+ members, overseeing hiring, mentoring, and career development.</li>
+                        <li>Architected scalable solutions to support up to a million devices, ensuring high availability, performance, and security.</li>
+                        <li>Collaborated with cross-functional teams including product, sales, and customer success to align technical strategies with business goals.</li>
+                        <li>Presented technical and strategic updates to the executive leadership, driving key decisions and initiatives.</li>
+                        <li>Instrumental in setting up best practices in DevOps, CI/CD, and cloud-native architectures.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Software Architect</div>
+                            <div class="company">Retailio</div>
+                        </div>
+                        <div class="date">11/2016 - 07/2017</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Designed and implemented a Master Data Management (MDM) system, significantly improving data accuracy and accessibility across the platform.</li>
+                        <li>Architected scalable reporting and analytics solutions, providing insights for business growth and operational efficiency.</li>
+                        <li>Led a team of engineers, ensuring high-quality deliverables through code reviews, mentoring, and technical guidance.</li>
+                        <li>Enhanced system reliability and performance, supporting a user base of over 1 million across India.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Software Development Engineer - 2</div>
+                            <div class="company">Amazon Development Center India</div>
+                        </div>
+                        <div class="date">07/2015 - 11/2016</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Led the development of a high-performance, scalable seller screening platform, supporting a 36x increase in users from 11M to 400M.</li>
+                        <li>Designed a self-service onboarding system for Amazon's screening platform, reducing onboarding time by 50%.</li>
+                        <li>Developed an AWS-based auditing platform for compliance and security monitoring, improving regulatory adherence.</li>
+                        <li>Reduced on-call burden through automation and optimization of team processes, improving overall team efficiency.</li>
+                        <li>Contributed to team growth through technical leadership, mentoring, and active participation in recruitment.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Developer / DevOps & Tech R&D Lead</div>
+                            <div class="company">TaxiforSure (Serendipity Infolabs Pvt Ltd)</div>
+                        </div>
+                        <div class="date">06/2014 - 06/2015</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Enhanced the performance and scalability of the core booking and dispatch platform, supporting rapid business growth.</li>
+                        <li>Designed and implemented a fraud detection system, reducing fraud incidents by 40%.</li>
+                        <li>Led DevOps and R&D initiatives, introducing Docker for streamlined development, testing, and deployment workflows.</li>
+                        <li>Coordinated with cross-functional teams to manage deployments and infrastructure improvements, ensuring system stability and uptime.</li>
+                        <li>Mentored junior developers and contributed to recruitment efforts, strengthening the technical expertise of the team.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Member of Technical Staff</div>
+                            <div class="company">Ideadevice Technologies Ltd</div>
+                        </div>
+                        <div class="date">09/2013 - 05/2014</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Developed core components for Epsilon (core product offering), including a high-performance VPN tunnel with REST interfaces.</li>
+                        <li>Optimized and scaled existing product solutions, enhancing performance for key clients.</li>
+                        <li>Led release management efforts, ensuring smooth and timely delivery of product updates.</li>
+                        <li>Contributed to open-source projects, including gunicorn and gevent, advancing community-based development.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Development Guru</div>
+                            <div class="company">Langoor Digital Pvt Ltd</div>
+                        </div>
+                        <div class="date">09/2012 - 09/2013</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Developed backend solutions for Langoor.mobi, optimizing site performance and conversion rates.</li>
+                        <li>Established new development processes and best practices, improving code quality and team productivity.</li>
+                        <li>Conducted technical workshops and mentoring sessions, fostering a culture of continuous learning and development.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Software Engineer (Embedded Systems) / Tools & Driver Developer</div>
+                            <div class="company">Robert Bosch Engineering and Business Solutions Ltd</div>
+                        </div>
+                        <div class="date">08/2007 - 02/2011</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Developed automation tools and performance profiling systems, improving development efficiency by 30%.</li>
+                        <li>Led the development of CAN protocol stack enhancements, enabling seamless integration with various automotive systems.</li>
+                        <li>Mentored junior engineers, contributing to a high-performance development team and fostering a collaborative environment.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">TECHNICAL SKILLS</div>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <div class="skill-title">Languages & Frameworks</div>
+                        <div class="skill-list">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">Golang</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">Django</span>
+                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">FastAPI</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Cloud & DevOps</div>
+                        <div class="skill-list">
+                            <span class="skill-item">AWS</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">Kubernetes</span>
+                            <span class="skill-item">Terraform</span>
+                            <span class="skill-item">Jenkins</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Databases</div>
+                        <div class="skill-list">
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">Redis</span>
+                            <span class="skill-item">Elasticsearch</span>
+                            <span class="skill-item">Kafka</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Tools & Platforms</div>
+                        <div class="skill-list">
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">GitLab</span>
+                            <span class="skill-item">Jenkins</span>
+                            <span class="skill-item">Prometheus</span>
+                            <span class="skill-item">Grafana</span>
+                            <span class="skill-item">Logstash</span>
+                            <span class="skill-item">Kibana</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Methodologies</div>
+                        <div class="skill-list">
+                            <span class="skill-item">Agile</span>
+                            <span class="skill-item">Scrum</span>
+                            <span class="skill-item">Lean</span>
+                            <span class="skill-item">Test-Driven Development (TDD)</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-title">Leadership & Management</div>
+                        <div class="skill-list">
+                            <span class="skill-item">Team Building</span>
+                            <span class="skill-item">Mentoring</span>
+                            <span class="skill-item">Strategic Planning</span>
+                            <span class="skill-item">Stakeholder Communication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">EDUCATION</div>
+                <div class="education">
+                    <div class="job-header">
+                        <div>
+                            <div class="education-title">Bachelor of Engineering (Electronics and Communication)</div>
+                            <div>Rajagiri School of Engineering and Technology</div>
+                        </div>
+                        <div class="date">2003 - 2007</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <hr class="my-6 border-gray-300" />
-      <div id="resume" class="text-left">
-        <h2 class="text-2xl font-semibold mt-8 mb-4">Overview</h2>
-        <p class="text-gray-800">
-          I am a seasoned technology leader with over 17 years of experience in
-          software development, architecture, and engineering management. I have
-          a strong track record in leading cross-functional teams, scaling cloud
-          platforms, and driving innovative solutions for complex technical
-          challenges. I am passionate about mentoring teams, strategic planning,
-          and delivering high-impact results.
-        </p>
-        <h2 class="text-2xl font-semibold mt-8 mb-4">Experience</h2>
-        <!-- Experience Entry -->
-        <div class="mb-6">
-          <div class="flex justify-between items-baseline">
-            <h3 class="text-xl font-semibold">
-              <a
-                href="https://esper.io/"
-                target="_blank"
-                class="hover:text-blue-500"
-                >Esper.io Inc</a
-              >
-            </h3>
-            <span class="text-gray-600">June 2018 - Present</span>
-          </div>
-          <p class="italic text-gray-700">
-            Principal Software Engineer (Cloud)
-          </p>
-          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
-            <li>
-              Led the design and development of core cloud services and
-              infrastructure, contributing to the company's rapid growth and
-              technological advancement.
-            </li>
-            <li>
-              Managed and scaled the cloud team from 5 to 80+ members,
-              overseeing hiring, mentoring, and career development.
-            </li>
-            <li>
-              Architected scalable solutions to support up to a million devices,
-              ensuring high availability, performance, and security.
-            </li>
-            <li>
-              Collaborated with cross-functional teams including product, sales,
-              and customer success to align technical strategies with business
-              goals.
-            </li>
-            <li>
-              Presented technical and strategic updates to the executive
-              leadership, driving key decisions and initiatives.
-            </li>
-            <li>
-              Instrumental in setting up best practices in DevOps, CI/CD, and
-              cloud-native architectures.
-            </li>
-          </ul>
-        </div>
-        <!-- Next Experience Entry -->
-        <div class="mb-6">
-          <div class="flex justify-between items-baseline">
-            <h3 class="text-xl font-semibold">
-              <a
-                href="https://retailio.in/"
-                target="_blank"
-                class="hover:text-blue-500"
-                >Retailio</a
-              >
-            </h3>
-            <span class="text-gray-600">Nov 2016 - July 2017</span>
-          </div>
-          <p class="italic text-gray-700">Software Architect</p>
-          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
-            <li>
-              Designed and implemented a Master Data Management (MDM) system,
-              significantly improving data accuracy and accessibility across the
-              platform.
-            </li>
-            <li>
-              Architected scalable reporting and analytics solutions, providing
-              insights for business growth and operational efficiency.
-            </li>
-            <li>
-              Led a team of engineers, ensuring high-quality deliverables
-              through code reviews, mentoring, and technical guidance.
-            </li>
-            <li>
-              Enhanced system reliability and performance, supporting a user
-              base of over 1 million across India.
-            </li>
-          </ul>
-        </div>
-        <!-- Continue with other experiences similarly -->
-        <div class="mb-6">
-          <div class="flex justify-between items-baseline">
-            <h3 class="text-xl font-semibold">
-              <a
-                href="http://www.amazon.com/"
-                target="_blank"
-                class="hover:text-blue-500"
-                >Amazon Development Center India</a
-              >
-            </h3>
-            <span class="text-gray-600">July 2015 - Nov 2016</span>
-          </div>
-          <p class="italic text-gray-700">Software Development Engineer - 2</p>
-          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
-            <li>
-              Led the development of a high-performance, scalable seller
-              screening platform, supporting a 36x increase in users from 11M to
-              400M.
-            </li>
-            <li>
-              Designed a self-service onboarding system for Amazon’s screening
-              platform, reducing onboarding time by 50%.
-            </li>
-            <li>
-              Developed an AWS-based auditing platform for compliance and
-              security monitoring, improving regulatory adherence.
-            </li>
-            <li>
-              Reduced on-call burden through automation and optimization of team
-              processes, improving overall team efficiency.
-            </li>
-            <li>
-              Contributed to team growth through technical leadership,
-              mentoring, and active participation in recruitment.
-            </li>
-          </ul>
-        </div>
-        <!-- Continue with other experiences similarly -->
-        <div class="mb-6">
-          <div class="flex justify-between items-baseline">
-            <h3 class="text-xl font-semibold">
-              <a
-                href="http://www.olacabs.com/"
-                target="_blank"
-                class="hover:text-blue-500"
-                >TaxiforSure (Serendipity Infolabs Pvt Ltd)</a
-              >
-            </h3>
-            <span class="text-gray-600">June 2014 - June 2015</span>
-          </div>
-          <p class="italic text-gray-700">Senior Developer / DevOps & Tech R&D Lead</p>
-          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
-            <li>
-              Enhanced the performance and scalability of the core booking and 
-              dispatch platform, supporting rapid business growth
-            </li>
-            <li>
-              Designed and implemented a fraud detection system, 
-              reducing fraud incidents by 40%
-            </li>
-            <li>
-              Led DevOps and R&D initiatives, introducing Docker 
-              for streamlined development, testing, and deployment workflows
-            </li>
-            <li>
-              Coordinated with cross-functional teams to manage deployments 
-              and infrastructure improvements, ensuring system stability and uptime
-            </li>
-            <li>
-              Mentored junior developers and contributed to recruitment efforts, 
-              strengthening the technical expertise of the team
-            </li>
-          </ul>
-        </div>
-        <!-- Continue with other experiences similarly -->
-        <div class="mb-6">
-          <div class="flex justify-between items-baseline">
-            <h3 class="text-xl font-semibold">
-              <a
-                href="https://www.nutanix.com"
-                target="_blank"
-                class="hover:text-blue-500"
-                >Ideadevice Technologies Ltd</a
-              >
-            </h3>
-            <span class="text-gray-600">Sept 2013 - May 2014</span>
-          </div>
-          <p class="italic text-gray-700">Senior Member of Technical Staff</p>
-          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
-            <li>
-              Developed core components for Epsilon (core product offering), 
-              including a high-performance VPN tunnel with REST interfaces
-            </li>
-            <li>
-              Optimized and scaled existing product solutions, 
-              enhancing performance for key clients.
-            </li>
-            <li>
-              Led release management efforts, ensuring smooth and 
-              timely delivery of product updates
-            </li>
-            <li>
-              Contributed to open-source projects, including gunicorn and gevent, 
-              advancing community-based development
-            </li>
-          </ul>
-        </div>
-        <!-- Continue with other experiences similarly -->
-        <div class="mb-6">
-          <div class="flex justify-between items-baseline">
-            <h3 class="text-xl font-semibold">
-              <a
-                href="http://www.langoor.com.au/"
-                target="_blank"
-                class="hover:text-blue-500"
-                >Langoor Digital Pvt Ltd</a
-              >
-            </h3>
-            <span class="text-gray-600">Sept 2012 - Sept 2013</span>
-          </div>
-          <p class="italic text-gray-700">Senior Development Guru</p>
-          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
-            <li>
-              Developed backend solutions for Langoor.mobi, 
-              optimizing site performance and conversion rates
-            </li>
-            <li>
-              Established new development processes and best practices, 
-              improving code quality and team productivity
-            </li>
-            <li>
-              Conducted technical workshops and mentoring sessions, 
-              fostering a culture of continuous learning and development
-            </li>
-          </ul>
-        </div>
-        <!-- Continue with other experiences similarly -->
-        <div class="mb-6">
-          <div class="flex justify-between items-baseline">
-            <h3 class="text-xl font-semibold">
-              <a
-                href="http://www.boschindia.com/"
-                target="_blank"
-                class="hover:text-blue-500"
-                >Robert Bosch Engineering and Business Solutions Ltd</a
-              >
-            </h3>
-            <span class="text-gray-600">Aug 2007 - Feb 2011</span>
-          </div>
-          <p class="italic text-gray-700">Senior Software Engineer (Embedded Systems) / Tools & Driver Developer</p>
-          <ul class="list-disc ml-6 mt-2 text-gray-800 space-y-1">
-            <li>
-              Developed automation tools and performance profiling systems, 
-              improving development efficiency by 30%
-            </li>
-            <li>
-              Led the development of CAN protocol stack enhancements, 
-              enabling seamless integration with various automotive systems
-            </li>
-            <li>
-              Mentored junior engineers, contributing to a high-performance 
-              development team and fostering a collaborative environment
-            </li>
-          </ul>
-        </div>
-        <!-- Add more experience entries here following the same structure -->
-        <h2 class="text-2xl font-semibold mt-8 mb-4">Education</h2>
-        <p class="text-gray-800">
-          <b>Bachelor of Engineering (Electronics and Communication)</b>,
-          Rajagiri School of Engineering and Technology, 2003
-          - 2007
-        </p>
-        <h2 class="text-2xl font-semibold mt-8 mb-4">Skills</h2>
-        <ul class="list-disc ml-6 mt-4 text-gray-800 space-y-2">
-          <li>
-            <b>Languages & Frameworks:</b> Python, Golang, JavaScript, Django,
-            Flask, FastAPI
-          </li>
-          <li>
-            <b>Cloud & DevOps:</b> AWS, Docker, Kubernetes, Terraform, Jenkins
-          </li>
-          <li><b>Databases:</b> PostgreSQL, Redis, Elasticsearch, Kafka</li>
-          <li>
-            <b>Tools & Platforms:</b> Git, GitLab, Jenkins, Prometheus, Grafana,
-            Logstash, Kibana
-          </li>
-          <li>
-            <b>Methodologies:</b> Agile, Scrum, Lean, Test-Driven Development
-            (TDD)
-          </li>
-          <li>
-            <b>Leadership & Management:</b> Team Building, Mentoring, Strategic
-            Planning, Stakeholder Communication
-          </li>
-        </ul>
-      </div>
     </div>
-  </body>
+</body>
 </html>
